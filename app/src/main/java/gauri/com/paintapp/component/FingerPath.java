@@ -6,7 +6,7 @@ import android.graphics.Path;
  * Created by Gauri Gadkari on 1/7/18.
  */
 
-public class FingerPath {
+class FingerPath {
 
     public int color;
     public int strokeWidth;

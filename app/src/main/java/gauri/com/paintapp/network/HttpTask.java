@@ -18,7 +18,7 @@ import javax.net.ssl.HttpsURLConnection;
  * Created by Gauri Gadkari on 1/7/18.
  */
 
-public class HttpTask extends AsyncTask<HttpRequest, String, HttpResponse> {
+class HttpTask extends AsyncTask<HttpRequest, String, HttpResponse> {
     private static final String TAG = "HttpTask";
     private static final int TIMEOUT = 10000;
 
@@ -78,7 +78,7 @@ public class HttpTask extends AsyncTask<HttpRequest, String, HttpResponse> {
         StringBuffer response = new StringBuffer();
         try {
             reader = new BufferedReader(new InputStreamReader(in));
-            String line = "";
+            String line;
             while ((line = reader.readLine()) != null) {
                 response.append(line);
             }

@@ -37,12 +37,15 @@ import gauri.com.paintapp.databinding.FragmentPaintBinding;
 import gauri.com.paintapp.network.JsonAPI;
 
 public class PaintFragment extends Fragment {
-    RadioButton redBrush, greenBrush, blueBrush, blackBrush;
-    PaintView paintView;
+    private RadioButton redBrush;
+    private RadioButton greenBrush;
+    private RadioButton blueBrush;
+    private RadioButton blackBrush;
+    private PaintView paintView;
     FragmentPaintBinding binding;
-    android.support.v7.widget.Toolbar toolbar;
-    ProgressBar spinner;
-    AsyncTask saveImageTask;
+    private android.support.v7.widget.Toolbar toolbar;
+    private ProgressBar spinner;
+    private AsyncTask saveImageTask;
 
     public PaintFragment() {
         // Required empty public constructor
@@ -137,11 +140,11 @@ public class PaintFragment extends Fragment {
         return new PaintFragment();
     }
 
-    public void showSpinner() {
+    private void showSpinner() {
         spinner.setVisibility(View.VISIBLE);
     }
 
-    public void hideSpinner() {
+    private void hideSpinner() {
         spinner.setVisibility(View.GONE);
     }
 
@@ -203,6 +206,7 @@ public class PaintFragment extends Fragment {
                                             CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
                                             CustomTabsIntent customTabsIntent = builder.build();
                                             customTabsIntent.launchUrl(fragment.get().getContext(), Uri.parse(url));
+                                            fragment.get().paintView.clear();
                                         }
                                     }).show();
                             fragment.get().hideSpinner();

@@ -9,8 +9,6 @@ import gauri.com.paintapp.R;
 import gauri.com.paintapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    private FragmentManager fragmentManager;
-    PaintFragment paintFragment;
     private ActivityMainBinding binding;
     private static final String PAINT_FRAGMENT = "paint_fragment";
 
@@ -18,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        fragmentManager = getSupportFragmentManager();
-        paintFragment = (PaintFragment) fragmentManager.findFragmentByTag(PAINT_FRAGMENT);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        PaintFragment paintFragment = (PaintFragment) fragmentManager.findFragmentByTag(PAINT_FRAGMENT);
 
         if (paintFragment == null) {
             paintFragment = PaintFragment.newInstance();
