@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PaintApp</string>
+    <string name="black">BLACK</string>
+    <string name="blue">BLUE</string>
+    <string name="green">GREEN</string>
+    <string name="red">RED</string>
+    <string name="image_saved">Image saved</string>
+    <string name="open_webpage">Open</string>
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
+</resources>
