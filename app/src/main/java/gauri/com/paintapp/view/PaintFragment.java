@@ -198,7 +198,7 @@ public class PaintFragment extends Fragment {
                     try {
                         if (fragment.get() != null) {
                             imageUrl = json.getJSONObject(Constants.RESPONSE_DATA).get(Constants.RESPONSE_LINK).toString();
-                            Snackbar.make(fragment.get().getView(), R.string.image_saved, Snackbar.LENGTH_LONG)
+                            Snackbar.make(fragment.get().getView(), R.string.image_saved, Snackbar.LENGTH_INDEFINITE)
                                     .setAction(R.string.open_webpage, new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
